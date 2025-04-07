@@ -4,7 +4,7 @@ Projekt **knihovna** v jazyce Python.
 - vyhledávání 
 - řazení dle hodnoceni z Databazeknih.cz
 - vkládání nových knih do seznamu
-- 
+
 ## Description
 
 - text
