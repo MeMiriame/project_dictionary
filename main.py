@@ -1,9 +1,11 @@
-from Users import Book, Author, User
-from Users import users
+from book import Book
+from author import Author
+from users import User
 
-
-book = Book(1, "Marco", "Adler Olsen", 2020, "crimi", 4.5, False)
-print(book.name+"\nAuthor: "+book.author)
+author1 = Author(1, "Adler J.", "Olsen", "Denmark")
+book = Book(1, "Marco", author1, 2020, "crimi", 4.5, False)
+print("Book:", book.name)
+print("Author:", book.author.first_name, book.author.last_name)
 
 try:
     book = Book("text", "1984", "George Orwell", 2009, "novel", 4.6, True)
