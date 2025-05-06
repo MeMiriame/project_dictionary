@@ -1,3 +1,5 @@
+from book import Book
+
 class User:
     def __init__(self, id: int, name: str, email: str, password: str) -> None:
         self.id = id

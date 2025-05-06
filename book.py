@@ -1,12 +1,14 @@
+from author import Author
+
 class Book:
-    def __init__(self, id: int, name: str, author: Author, year_publication: int, category: str, review: float,
+    def __init__(self, id: int, title: str, author: Author, year_publication: int, category: str, review: float,
                  borrow: bool) -> None:
         if not isinstance(id, int):
             raise TypeError("ID must be an integer")
-        if not isinstance(name, str):
+        if not isinstance(title, str):
             raise TypeError("Name must be a string")
-        if not isinstance(author, str):
-            raise TypeError("Author must be a string")
+        if not isinstance(author, Author):
+            raise TypeError("Author must be an Author instance")
         if not isinstance(year_publication, int):
             raise TypeError("Year publication must be an integer")
         if not isinstance(category, str):
@@ -16,7 +18,7 @@ class Book:
 
 
         self.id = id
-        self.name = name
+        self.name = title
         self.author = author
         self.year_publication = year_publication
         self.category = category
