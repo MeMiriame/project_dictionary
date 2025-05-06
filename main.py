@@ -1,5 +1,5 @@
-from classes_dictionary import Book, Author, User
-from classes_dictionary import users
+from Users import Book, Author, User
+from Users import users
 
 
 book = Book(1, "Marco", "Adler Olsen", 2020, "crimi", 4.5, False)

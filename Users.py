@@ -1,51 +1,3 @@
-class Author:
-    def __init__(self, id: int, first_name: str, last_name: str, country: str) -> None:
-        if not isinstance(id, int):
-            raise TypeError("ID must be an integer")
-        if not isinstance(first_name, str):
-            raise TypeError("First name must be a string")
-        if not isinstance(last_name, str):
-            raise TypeError("Last name must be a string")
-        if not isinstance(country, str):
-            raise TypeError("Country must be a string")
-        self.id = id
-        self.first_name = first_name
-        self.last_name = last_name
-        self.country = country
-
-class Book:
-    def __init__(self, id: int, name: str, author: Author, year_publication: int, category: str, review: float,
-                 borrow: bool) -> None:
-        if not isinstance(id, int):
-            raise TypeError("ID must be an integer")
-        if not isinstance(name, str):
-            raise TypeError("Name must be a string")
-        if not isinstance(author, str):
-            raise TypeError("Author must be a string")
-        if not isinstance(year_publication, int):
-            raise TypeError("Year publication must be an integer")
-        if not isinstance(category, str):
-            raise TypeError("Category must be a string")
-        if not isinstance(review, float):
-            raise TypeError("Review must be a float")
-
-
-        self.id = id
-        self.name = name
-        self.author = author
-        self.year_publication = year_publication
-        self.category = category
-        self.review = review
-        self.borrow = borrow
-
-    def borrow(self):
-        if not self.borrow:
-            self.borrow = True
-            print(f"Kniha {self.name} borrowed")
-        if self.borrow:
-            self.borrow = False
-            print(f"Kniha {self.name} is free")
-
 class User:
     def __init__(self, id: int, name: str, email: str, password: str) -> None:
         self.id = id
@@ -87,8 +39,7 @@ user15 = User(15, "Klara Ruzickova", "klara.ruzickova@email.cz", "ruzicka789")
 users = [
     user1, user2, user3, user4, user5,
     user6, user7, user8, user9, user10,
-    user11, user12, user13, user14, user15
-]
+    user11, user12, user13, user14, user15]
 
 
 
